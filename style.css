@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     margin: 0;
 
-    /* Dégradé nuit */
+    /* Dégradé */
     background: linear-gradient(to bottom, #020024, #090979, #000);
     color: #fff;
     font-family: Arial, sans-serif;
@@ -53,11 +53,11 @@ input[type="submit"] {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border-radius: 8px;                   /* m�me forme */
+  border-radius: 8px;                   /* même forme */
   font-size: 1rem;
   outline: none;
   transition: all 0.3s ease;
-  box-sizing: border-box;               /* �vite les diff�rences de taille */
+  box-sizing: border-box;               /* évite les différences de taille */
 }
 
 /* Input champ classique */
@@ -81,7 +81,7 @@ input[type="number"]:focus {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Bouton n�on */
+/* Bouton néon */
 input[type="submit"] {
   border: 2px solid #00c6ff;
   background: transparent;

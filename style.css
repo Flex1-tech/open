@@ -1,0 +1,250 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    min-height: 100vh;
+    margin: 0;
+
+    /* Dégradé nuit */
+    background: linear-gradient(to bottom, #020024, #090979, #000);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+ .contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Effet étoiles */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* Champs input n�on */
+input[type="number"],
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;                   /* m�me forme */
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;               /* �vite les diff�rences de taille */
+}
+
+/* Input champ classique */
+input[type="number"] {
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.05); 
+  color: #fff;
+  box-shadow: 0 0 8px rgba(0, 198, 255, 0.5); 
+}
+
+/* Placeholder lumineux */
+input::placeholder {
+  color: rgba(0, 198, 255, 0.7);
+  font-style: italic;
+}
+
+/* Effet focus plus intense */
+input[type="number"]:focus {
+  border-color: #00c6ff;
+  box-shadow: 0 0 15px #00c6ff, 0 0 25px #6d5bf6;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Bouton n�on */
+input[type="submit"] {
+  border: 2px solid #00c6ff;
+  background: transparent;
+  color: #00c6ff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00c6ff, inset 0 0 8px rgba(0, 198, 255, 0.5);
+}
+
+/* Hover bouton n�on */
+input[type="submit"]:hover {
+  background: #00c6ff;
+  color: #000;
+  box-shadow: 0 0 20px #00c6ff, 0 0 40px #6d5bf6;
+  transform: scale(1.05);
+}
+.contain{
+position: relative;
+}
+
+.history {
+position: absolute;
+top: 15px;
+right: 15px;
+color: #00c6ff;
+opacity: 0.8;
+transition: transform 0.3s ease, opacity 0.3s ease;
+cursor: pointer;
+}
+.history:hover{
+    transform: rotate(20deg) scale(1.2);
+    opacity: 1;
+    color: #6d5bf6;
+}
+
+
+button {
+  background: inherit;
+}
+
+/* Boîte de l’historique */
+.history-box {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid rgba(0,198,255,0.5);
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0,198,255,0.5), inset 0 0 10px rgba(0,198,255,0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.history-box h3 {
+  margin-bottom: 15px;
+  color: #00c6ff;
+  text-shadow: 0 0 10px #6d5bf6, 0 0 15px #00c6ff;
+  font-size: 1.4rem;
+}
+
+/* Liste sans puces */
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Élément historique */
+.history-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) auto;
+  gap: 8px;
+  align-items: center;
+
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 8px rgba(0,198,255,0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.history-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #00c6ff, 0 0 30px #6d5bf6;
+}
+
+/* Texte */
+.history-item span {
+  color: #fff;
+  font-size: 0.95rem;
+  text-shadow: 0 0 5px rgba(0,198,255,0.6);
+}
+
+/* Interprétation mise en avant */
+.history-item .interpret {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #00c6ff;
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Bouton suppression */
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #ff4d4d;
+  transition: transform 0.2s ease, text-shadow 0.3s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.3);
+  text-shadow: 0 0 8px #ff4d4d, 0 0 15px #ff0000;
+}
+
+/* Effet apparition */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#historique {
+  display: none; /* caché par défaut */
+  max-width: 600px;
+  margin-top: 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Conteneur général historique */
+#historique {
+  display: none; /* toggle gère l'affichage */
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+/* Boîte de l’historique */
+.history-box {
+  padding: 20px;
+  border: 2px solid rgba(0,198,255,0.5);
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0,198,255,0.5), inset 0 0 10px rgba(0,198,255,0.3);
+  animation: fadeIn 0.5s ease-in-out;
+  max-height: 250px;       /* hauteur max */
+  overflow-y: auto;        /* scroll vertical */
+  scrollbar-width: thin;   /* style Firefox */
+  scrollbar-color: #00c6ff transparent;
+}
+
+/* Scrollbar stylée (Chrome / Edge / Safari) */
+.history-box::-webkit-scrollbar {
+  width: 8px;
+}
+.history-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+.history-box::-webkit-scrollbar-thumb {
+  background: #00c6ff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #6d5bf6;
+}
+.history-box::-webkit-scrollbar-thumb:hover {
+  background: #6d5bf6;
+}
